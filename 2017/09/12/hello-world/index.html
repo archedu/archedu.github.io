@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hello earch | Edu Arch</title>
+  <title>nginx浅析 | Edu Arch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="什么是nginxNginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的。 Igor 将源代码开源，并赋予其最自由的2-clause BSD-like license许可证。 为什么选择nginx7 年前，Nginx 的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello EArch">
+<meta property="og:title" content="nginx浅析">
 <meta property="og:url" content="https://edu-arch.github.io/2017/09/12/hello-world/index.html">
 <meta property="og:site_name" content="Edu Arch">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-09-13T02:25:58.000Z">
+<meta property="og:description" content="什么是nginxNginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的。 Igor 将源代码开源，并赋予其最自由的2-clause BSD-like license许可证。 为什么选择nginx7 年前，Nginx 的">
+<meta property="og:updated_time" content="2017-09-13T02:51:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello EArch">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="nginx浅析">
+<meta name="twitter:description" content="什么是nginxNginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的。 Igor 将源代码开源，并赋予其最自由的2-clause BSD-like license许可证。 为什么选择nginx7 年前，Nginx 的">
   
     <link rel="alternate" href="/atom.xml" title="Edu Arch" type="application/atom+xml">
   
@@ -164,7 +164,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      Hello EArch
+      nginx浅析
     </h1>
   
 
@@ -187,16 +187,235 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="什么是nginx"><a href="#什么是nginx" class="headerlink" title="什么是nginx"></a>什么是nginx</h2><p>Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的。 Igor 将源代码开源，并赋予其最自由的2-clause BSD-like license许可证。</p>
+<h2 id="为什么选择nginx"><a href="#为什么选择nginx" class="headerlink" title="为什么选择nginx"></a>为什么选择nginx</h2><p>7 年前，Nginx 的份额还只是 3.9%，如今已达到 33.3 %，是增量最快的 Web 服务器。平均而言，在全球 Top 1000 万网站当中，每分钟有 1 网站转向 Nginx。<br>同样是 7 年前，Apache 的份额是 71.5%，如今降到 59%。微软是 IIS 从 20.6% 降到 11.3%。</p>
+<p>在全球前 10000 高流量网站当中，Nginx 的份额高达 58.4%。在前 1 百万网站中，Apache 份额是 42.8%，但 Nginx 是 39.7%。</p>
+<p>为什么选择nginx？因为它具有以下特点：</p>
+<ul>
+<li>配置简单</li>
+<li>高扩展性<br>模块化的设计。</li>
+<li>高可靠性<br>master-worker可靠架构。</li>
+<li>低内存消耗<br>1000个http连接仅消耗2.5M内存。</li>
+<li>高并发<br>单机支持5w以上并发连接。</li>
+<li>支持热部署<br>master-worker进程分离设计，可以在24小时不间断服务前提下，更新配置等文件。</li>
+</ul>
+<h2 id="nginx架构"><a href="#nginx架构" class="headerlink" title="nginx架构"></a>nginx架构</h2><h3 id="模块化设计"><a href="#模块化设计" class="headerlink" title="模块化设计"></a>模块化设计</h3><p>Nginx 将各功能模块组织成一条链，当有请求到达的时候，请求依次经过这条链上的部分或者全部模块，进行处理。每个模块实现特定的功能。例如，实现对请求解压缩的模块，实现 SSI 的模块，实现与上游服务器进行通讯的模块，实现与 FastCGI 服务进行通讯的模块。<br>Nginx 的模块根据其功能基本上可以分为以下几种类型：</p>
+<ul>
+<li>core module：构建nginx基础服务、管理其他模块。</li>
+<li>event module：搭建了独立于操作系统的事件处理机制的框架，以及提供了各具体事件的处理，包括ngx_event_module、ngx_event_core_module等。</li>
+<li>phase handler：此类型的模块也被直接称为handler模块，主要负责处理客户端请求并产生待响应内容，比如ngx_http_module模块，负责客户端的静态页面请求处理并将对应的磁盘文件准备为响应内容输出。</li>
+<li>output filter：也称为filter模块，主要是负责对输出的内容进行处理，可以对输出进行修改，比如可以实现对输出的所有html页面增加预定义的footbar一类的工作，或者对输出的图片的URL进行替换之类的工作。</li>
+<li>upstream：实现反向代理功能，将真正的请求转发到后端服务器上，并从后端服务器上读取响应，发回客户端，upstream模块是一种特殊的handler，只不过响应内容不是真正由自己产生的，而是从后端服务器上读取的。</li>
+<li>load-balancer：负载均衡模块，实现特定的算法，在众多的后端服务器中，选择一个服务器出来作为某个请求的转发服务器。</li>
+<li>extend module：根据特定业务需要编写的第三方模块。</li>
+</ul>
+<p>当服务器启动，每个handlers(处理模块)都有机会映射到配置文件中定义的特定位置（location） ，如果有多个handlers(处理模块)映射到特定位置时，只有一个会“赢”（说明配置文件有冲突项，应该避免发生）。 处理模块以三种形式返回：</p>
+<ul>
+<li>OK</li>
+<li>ERROR</li>
+<li>放弃处理这个请求而让默认处理模块来处理（主要是用来处理一些静态文件，事实上如果是位置正确而真实的静态文件，默认的处理模块会抢先处理)</li>
+</ul>
+<p>如果handlers(处理模块)把请求反向代理到后端的服务器，就变成另外一类的模块：load-balancers（负载均衡模块）。<br>负载均衡模块的配置中有一组后端服务器，当一个HTTP请求过来时，它决定哪台服务器应当获得这个请求。Nginx的负载均衡模块采用两种方法：</p>
+<ul>
+<li>轮转法</li>
+<li>IP哈希法</li>
+</ul>
+<p>如果handlers(处理模块)没有产生错误，filters（过滤模块）将被调用。<br>多个filters（过滤模块）能映射到每个位置，所以（比如）每个请求都可以被压缩成块。它们的执行顺序在编译时决定。<br>filters（过滤模块）是经典的“接力链表（CHAIN OF RESPONSIBILITY）”模型：一个filters（过滤模块）被调用，完成其工作，然后调用下一个filters（过滤模块），直到最后一个filters（过滤模块）。Nginx完成这个回复。</p>
+<h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p>Nginx采用「Master-Worker」模型。Nginx在启动后，会有一个 master 进程和多个 worker 进程。<br>master 进程主要用来与外界通信和管理 worker 进程。包含：</p>
+<ul>
+<li>读取Nginx配置文件并验证其有效性和正确性。</li>
+<li>建立、绑定和关闭socket。</li>
+<li>按照配置生成、管理和结束工作进程。</li>
+<li>接收外界指令，例如重启、升级及退出服务器等指令。</li>
+<li>不中断服务实现平滑升级重启。</li>
+<li>开启日志文件，获取文件描述符。</li>
+</ul>
+<p>worker 进程主要处理基本的网络事件，多个 worker 进程之间是对等的，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个请求，只可能在一个 worker 进程中处理，一个 Worker 进程，不可能处理其它进程的请求。Work进程主要工作有：</p>
+<ul>
+<li>接收客户端请求。</li>
+<li>将请求依次送入各个功能模块进行过滤处理。</li>
+<li>IO调用，获取响应数据。</li>
+<li>与后端服务器通信，接收后端服务器处理结果。</li>
+<li>数据缓存。</li>
+<li>发送响应。</li>
+<li>接收主程序指令。</li>
+</ul>
+<p>worker 进程的个数是可以设置的，一般会设置与机器 cpu 核数一致，这里面的原因与 nginx 的进程模型以及事件处理模型是分不开的。nginx 为了更好的利用多核特性，提供了 cpu 亲缘性的绑定选项，我们可以将某一个进程绑定在某一个核上，这样就不会因为进程的切换带来 cache 的失效。更多的 worker 数，只会导致进程来竞争 cpu 资源。</p>
+<h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><p>Nginx 对于事件，以「异步非阻塞」方式来实现。异步和非异步，阻塞和非阻塞是两组不同的概念，前者更多对于应用程序而言，而后者更多对于 CPU 来说：</p>
+<ol>
+<li>异步：执行一个动作之后，可以去操作别的操作，然后等待通知再回来执行刚才没执行完的操作。</li>
+<li>同步：执行一个操作之后，等待结果，然后才继续执行下面的操作。</li>
+<li>阻塞：给 CPU 传达任务之后，一直等待 CPU 处理完毕(即使会产生I/O)，然后才执行下面操作。</li>
+<li>非阻塞：给 CPU 传达任务之后，继续处理后面的操作，隔段时间再来询问之前的操作是否完成。这样的过程也叫「轮询」。</li>
+</ol>
+<p>Nginx采用事件驱动架构处理业务，这与传统Web服务器不同。Apache通过创建进程和线程来处理其他的连接。管理员可以通过设置来控制服务器所能允许的最大进程数量。这个配置因机器的可用内存而异。过多的进程会耗尽内存从而使得机器使用磁盘上的交换内存，这严重的降低了性能。而且，当达到进程的上限之后，Apache会拒绝新的连接。</p>
+<h2 id="Nginx配置概述"><a href="#Nginx配置概述" class="headerlink" title="Nginx配置概述"></a>Nginx配置概述</h2><h3 id="典型的nginx-conf配置"><a href="#典型的nginx-conf配置" class="headerlink" title="典型的nginx.conf配置"></a>典型的nginx.conf配置</h3><pre><code>worker_processes  4;
 
+error_log  logs/error.log;
+pid        logs/nginx.pid;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot; $upstream_addr $host&apos;;
+
+    access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    server {
+        listen       8780;
+        server_name  nginx.server.com;
+
+        location = /50x.html {
+            root   html;
+        }
+
+        location ^~ /user {
+            rewrite ^ &quot;/index.php?pv=user&amp;lm=$2&amp;$query_string?&quot; last;
+        }
+
+        location ~ &quot;^/apache/&quot; {
+            proxy_set_header Host apache.server.com;
+            proxy_pass   http://127.0.0.1;
+        }
+
+        location ~ &quot;\.php$&quot; {
+            root           html;
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+            include        fastcgi_params;
+        }
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+    }
+
+    server {
+        listen       80;
+        server_name  apache.server.com;
+
+        location / {
+            return 200 &quot;from: apache.server.com, req: $request_uri, $uri\n&quot;;
+        }
+    }
+}
+</code></pre><h3 id="配置文件结构"><a href="#配置文件结构" class="headerlink" title="配置文件结构"></a>配置文件结构</h3><ul>
+<li>全局块：配置影响nginx全局的指令。一般有运行nginx服务器的用户组，nginx进程pid存放路径，日志存放路径，配置文件引入，允许生成worker process数等。</li>
+<li>events块：设配置影响nginx服务器或与用户的网络连接。有每个进程的最大连接数，选取哪种事件驱动模型处理连接请求，是否允许同时接受多个网路连接，开启多个网络连接序列化等。</li>
+<li>http块：可以嵌套多个server，配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置。如文件引入，mime-type定义，日志自定义，是否使用sendfile传输文件，连接超时时间，单连接请求数等。</li>
+<li>server块：配置虚拟主机的相关参数，一个http中可以有多个server。</li>
+<li>location块：配置请求的路由，以及各种页面的处理情况。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div></pre></td><td class="code"><pre><div class="line">#运行用户</div><div class="line">user nobody;</div><div class="line">#启动进程,通常设置成和cpu的数量相等</div><div class="line">worker_processes  1;</div><div class="line"></div><div class="line">#全局错误日志及PID文件</div><div class="line">#error_log  logs/error.log;</div><div class="line">#error_log  logs/error.log  notice;</div><div class="line">#error_log  logs/error.log  info;</div><div class="line"></div><div class="line">#pid        logs/nginx.pid;</div><div class="line"></div><div class="line">#工作模式及连接数上限</div><div class="line">events &#123;</div><div class="line">    #epoll是多路复用IO(I/O Multiplexing)中的一种方式,</div><div class="line">    #仅用于linux2.6以上内核,可以大大提高nginx的性能</div><div class="line">    use   epoll; </div><div class="line"></div><div class="line">    #单个后台worker process进程的最大并发链接数    </div><div class="line">    worker_connections  1024;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">http &#123;</div><div class="line">    #设定mime类型,类型由mime.type文件定义</div><div class="line">    include    mime.types;</div><div class="line">    default_type  application/octet-stream;</div><div class="line">    #设定日志格式</div><div class="line">    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</div><div class="line">                      '$status $body_bytes_sent "$http_referer" '</div><div class="line">                      '"$http_user_agent" "$http_x_forwarded_for"';</div><div class="line"></div><div class="line">    access_log  logs/access.log  main;</div><div class="line"></div><div class="line">    #sendfile 指令指定 nginx 是否调用 sendfile 函数（zero copy 方式）来输出文件，</div><div class="line">    #对于普通应用，必须设为 on,</div><div class="line">    #如果用来进行下载等应用磁盘IO重负载应用，可设置为 off，</div><div class="line">    #以平衡磁盘与网络I/O处理速度，降低系统的uptime.</div><div class="line">    sendfile     on;</div><div class="line">    #tcp_nopush     on;</div><div class="line"></div><div class="line">    #连接超时时间</div><div class="line">    #keepalive_timeout  0;</div><div class="line">    keepalive_timeout  65;</div><div class="line">    tcp_nodelay     on;</div><div class="line"></div><div class="line">    #开启gzip压缩</div><div class="line">    gzip  on;</div><div class="line">    gzip_disable "MSIE [1-6].";</div><div class="line"></div><div class="line">    #设定请求缓冲</div><div class="line">    client_header_buffer_size    128k;</div><div class="line">    large_client_header_buffers  4 128k;</div><div class="line"></div><div class="line"></div><div class="line">    #设定虚拟主机配置</div><div class="line">    server &#123;</div><div class="line">        #侦听80端口</div><div class="line">        listen    80;</div><div class="line">        #定义使用 www.nginx.cn访问</div><div class="line">        server_name  www.nginx.cn;</div><div class="line"></div><div class="line">        #定义服务器的默认网站根目录位置</div><div class="line">        root html;</div><div class="line"></div><div class="line">        #设定本虚拟主机的访问日志</div><div class="line">        access_log  logs/nginx.access.log  main;</div><div class="line"></div><div class="line">        #默认请求</div><div class="line">        location / &#123;</div><div class="line">            </div><div class="line">            #定义首页索引文件的名称</div><div class="line">            index index.php index.html index.htm;   </div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        # 定义错误提示页面</div><div class="line">        error_page   500 502 503 504 /50x.html;</div><div class="line">        location = /50x.html &#123;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        #静态文件，nginx自己处理</div><div class="line">        location ~ ^/(images|javascript|js|css|flash|media|static)/ &#123;</div><div class="line">            </div><div class="line">            #过期30天，静态文件不怎么更新，过期可以设大一点，</div><div class="line">            #如果频繁更新，则可以设置得小一点。</div><div class="line">            expires 30d;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        #PHP 脚本请求全部转发到 FastCGI处理. 使用FastCGI默认配置.</div><div class="line">        location ~ .php$ &#123;</div><div class="line">            fastcgi_pass 127.0.0.1:9000;</div><div class="line">            fastcgi_index index.php;</div><div class="line">            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</div><div class="line">            include fastcgi_params;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        #禁止访问 .htxxx 文件</div><div class="line">            location ~ /.ht &#123;</div><div class="line">            deny all;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="请求中配置处理过程"><a href="#请求中配置处理过程" class="headerlink" title="请求中配置处理过程"></a>请求中配置处理过程</h3><ol>
+<li>整体过程：<br>读取客户端请求数据；<br>决定由哪个server块配置来处理本次请求；<br>按照11个阶段依次处理请求。</li>
+<li>server块匹配规则<br>匹配优先级从高到低：<blockquote>
+<ol>
+<li>完全一致的名称（wenku.baidu.com）</li>
+</ol>
+</blockquote>
+</li>
+<li>最长后缀匹配（名称以<code>*</code>开头，*.baidu.com）</li>
+<li>最长前缀匹配（名称以<code>*</code>结尾，www.*）</li>
+<li>第一个成功匹配的正则形式域名（名称以<code>~</code>开头，如<code>server_name  &quot;~^(?&lt;name&gt;\w\d{1,3}+)\.example\.net$&quot;;</code>）</li>
+</ol>
+<p>如果没有匹配成功，则选择默认server来处理（默认值为第一个server块）。当然，也可以通过<code>default_server</code>指令指定默认server（nginx 0.8以前的版本使用的是<code>default</code>，orp目前使用的是1.8）。</p>
+<pre><code>server {
+    listen      80;
+    server_name www.example.org;
+    ...
+}
+
+server {
+    listen      80 default_server;
+    server_name example.net www.example.net;
+    ...
+}
+</code></pre><h3 id="请求处理过程"><a href="#请求处理过程" class="headerlink" title="请求处理过程"></a>请求处理过程</h3><p>对于每个HTTP请求，nginx将其划分为11个阶段按顺序进行相应的处理，每个阶段完成特定的工作。</p>
+<pre><code>   typedef enum {
+    //在接收到完整的HTTP头部后处理的HTTP阶段
+    NGX_HTTP_POST_READ_PHASE = 0,
+
+    //在请求的URI与location表达式匹配前，修改请求的URI(重定向)
+    NGX_HTTP_SERVER_REWRITE_PHASE,
+
+    //根据请求的URI寻找匹配的location表达式
+    NGX_HTTP_FIND_CONFIG_PHASE,
+
+    //在NGX_HTTP_FIND_CONFIG_PHASE阶段寻找到匹配的location之后再修改请求的URI
+    NGX_HTTP_REWRITE_PHASE,
+
+    //这一阶段是用于在rewrite重写URL后，防止错误的nginx.conf配置导致死循环(递归地修改URI)
+    NGX_HTTP_POST_REWRITE_PHASE,
+
+    //表示在处理NGX_HTTP_ACCESS_PHASE阶段觉得请求的访问权限前，HTTP模块可以介入的处理阶段
+    NGX_HTTP_PREACCESS_PHASE,
+
+    //这个阶段用于让HTTP模块判断是否允许这个请求访问nginx服务器
+    NGX_HTTP_ACCESS_PHASE,
+
+    //在NGX_HTTP_ACCESS_PHASE阶段中，当HTTP模块的handler处理函数返回不允许访问的错误码时(NGX_HTTP_FORBIDDEN或者NGX_HTTP_UNAUHORIZED)，这里将负责向用户发送拒绝服务的错误响应。
+    NGX_HTTP_POST_ACCESS_PHASE,
+
+    //此阶段专门为try_files配置项设立，当HTTP请求访问静态文件资源时，try_files配置项可以使这个配置项顺序地访问多个静态文件资源
+    NGX_HTTP_TRY_FILES_PHASE,
+
+    //用于处理HTTP请求内容的阶段，这是大部分HTTP模块最愿意介入的阶段
+    NGX_HTTP_CONTENT_PHASE,
+
+    //处理完请求后记录日志的阶段，ngx_http_log_module模块就在这个阶段中加入了一个handler处理方法，使得每个HTTP请求处理完毕后会记录access_log访问日志
+    NGX_HTTP_LOG_PHASE
+} ngx_http_phases;
+</code></pre><p>下面以实例解释其涉及的几个阶段：</p>
+<p>需要注意的是：</p>
+<ul>
+<li>位于不同处理阶段的指令，其执行顺序和在配置文件中出现的顺序无关<ul>
+<li>如上图，虽然server_rewrite的配置出现在FIND_CONFIG下面，但是其相关配置依然会优先于FIND_CONFIG配置执行</li>
+</ul>
+</li>
+<li>同一阶段/模块的指令，其执行顺序和配置文件中出现的顺序通常有关<ul>
+<li>具体例子可以参考后面的文章</li>
+</ul>
+</li>
+<li>if块中出现的指令，其执行阶段依然由其对应模块本身决定，不会因为被if包含就改变了执行阶段<h2 id="nginx功能"><a href="#nginx功能" class="headerlink" title="nginx功能"></a>nginx功能</h2><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3>反向代理服务器作用在服务器端，它在服务器端接收客户端的请求，然后将请求分发给具体的服务器进行处理，然后再将服务器的相应结果反馈给客户端。Nginx转发前端请求性能稳定，配置灵活。可以根据不同的配置采取不同的转发策略，支持错误页跳转等功能。</li>
+</ul>
+<p>配置示例：</p>
+<pre><code>upstream backend {
+    server backend1.example.com       weight=5;
+    server backend2.example.com:8080;
+
+    server backup1.example.com:8080   backup;
+}
+
+server {
+    location / {
+        proxy_pass http://backend;
+    }
+}
+</code></pre><p>IP hash配置示例</p>
+<pre><code>upstream backend {
+    ip_hash;
+
+    server backend1.example.com;
+    server backend2.example.com;
+    server backend3.example.com down;
+    server backend4.example.com;
+}
+</code></pre><h2 id="一次请求中，nginx做了什么"><a href="#一次请求中，nginx做了什么" class="headerlink" title="一次请求中，nginx做了什么"></a>一次请求中，nginx做了什么</h2>
       
     </div>
     <footer class="article-footer">
@@ -241,7 +460,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Inhalt</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是nginx"><span class="nav-number">1.</span> <span class="nav-text">什么是nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择nginx"><span class="nav-number">2.</span> <span class="nav-text">为什么选择nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx架构"><span class="nav-number">3.</span> <span class="nav-text">nginx架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块化设计"><span class="nav-number">3.1.</span> <span class="nav-text">模块化设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程模型"><span class="nav-number">3.2.</span> <span class="nav-text">进程模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件模型"><span class="nav-number">3.3.</span> <span class="nav-text">事件模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置概述"><span class="nav-number">4.</span> <span class="nav-text">Nginx配置概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#典型的nginx-conf配置"><span class="nav-number">4.1.</span> <span class="nav-text">典型的nginx.conf配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件结构"><span class="nav-number">4.2.</span> <span class="nav-text">配置文件结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求中配置处理过程"><span class="nav-number">4.3.</span> <span class="nav-text">请求中配置处理过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求处理过程"><span class="nav-number">4.4.</span> <span class="nav-text">请求处理过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx功能"><span class="nav-number">5.</span> <span class="nav-text">nginx功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#反向代理"><span class="nav-number">5.1.</span> <span class="nav-text">反向代理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一次请求中，nginx做了什么"><span class="nav-number">6.</span> <span class="nav-text">一次请求中，nginx做了什么</span></a></li></ol>
     
     </div>
   </aside>
