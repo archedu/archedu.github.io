@@ -11,17 +11,19 @@
   
   
   
-  <meta name="description" content="如果说到Node.js那么一定就会说到Express Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。 如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个比较">
+  <meta name="description" content="如果说到Node.js那么一定就会说到Express  Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。 如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Express细聊">
 <meta property="og:url" content="https://edu-arch.github.io/2017/09/28/Express细聊/index.html">
 <meta property="og:site_name" content="敲大码">
-<meta property="og:description" content="如果说到Node.js那么一定就会说到Express Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。 如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个比较">
-<meta property="og:updated_time" content="2017-09-28T06:25:35.000Z">
+<meta property="og:description" content="如果说到Node.js那么一定就会说到Express  Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。 如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个">
+<meta property="og:image" content="http://o8sxkcont.bkt.clouddn.com/4f17c357aa2d5bb871a0fdc1e382a74d.png">
+<meta property="og:updated_time" content="2017-09-28T06:39:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Express细聊">
-<meta name="twitter:description" content="如果说到Node.js那么一定就会说到Express Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。 如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个比较">
+<meta name="twitter:description" content="如果说到Node.js那么一定就会说到Express  Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。 如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个">
+<meta name="twitter:image" content="http://o8sxkcont.bkt.clouddn.com/4f17c357aa2d5bb871a0fdc1e382a74d.png">
   
     <link rel="alternate" href="/atom.xml" title="敲大码" type="application/atom+xml">
   
@@ -98,9 +100,9 @@
             <div class="navbar-collapse collapse">
               <ul class="hnav navbar-nav">
                 
-                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                  <li> <a class="main-nav-link" href="/">Startseite</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                  <li> <a class="main-nav-link" href="/archives">Archive</a> </li>
                 
                   <li> <a class="main-nav-link" href="/about">About</a> </li>
                 
@@ -114,7 +116,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <input type="text" class="ins-search-input" placeholder="Schreib etwas..." />
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -126,11 +128,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
+            POSTS: 'Beiträge',
+            PAGES: 'Seiten',
+            CATEGORIES: 'Kategorien',
             TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+            UNTITLED: '(Unbenannt)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -186,43 +188,23 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>如果说到Node.js那么一定就会说到Express</p>
+        <blockquote>
+<p>如果说到Node.js那么一定就会说到Express</p>
+</blockquote>
 <p>Express.js如它的官网的介绍：快速、可选式、轻量的Web框架（Fast, unopinionated, minimalist web framework）。</p>
-<p>如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。本文也是基于Express最新的官方文档来对Express进行一个比较细致的学习。</p>
-<p>Node.js的HTTP模块</p>
-<p>Node.js最开始推出来的时候，作者对它的定义就是一个高性能的非阻塞I/O的web服务器，所以很明显原生的Node.js就提供了很完善的http相关的接口来帮助你快速的搭建你自己的一个web服务，所以说Node.js本身是有http模块能够便捷的提供web服务；</p>
-<pre><code>const http = require(&apos;http&apos;);
-
-const hostname = &apos;127.0.0.1&apos;;
-const port = 3000;
-
-const server = http.createServer((req, res) =&gt; {
-  res.statusCode = 200;
-  res.setHeader(&apos;Content-Type&apos;, &apos;text/plain&apos;);
-  res.end(&apos;Hello World\n&apos;);
-});
-
-server.listen(port, hostname, () =&gt; {
-  console.log(`Server running at         http://${hostname}:${port}/`);
-});
-</code></pre><p>但是当我们需要一个路由，需要根据不同的http method来进行不同的response，这个时候http 模块的短板显露无疑，这个时候Express应运而生。</p>
-<p>基于Express搭建一个Web服务</p>
-<p>简单来说Express就是在Node.js的基础上进行了一层封装帮助开发者更加简单的搭建Web服务；</p>
-<pre><code>app.listen = function listen() {
-  var server = http.createServer(this);
-  return server.listen.apply(server, arguments);
-};
-</code></pre><p>以上就是Express源码中/lib/application.js中对node.js的http模块的createServer方法的封装。</p>
+<p><strong>如果说要熟悉一个框架或者某一门语言，个人觉得最快的方式就是去阅读它的官方文档，最好是原始的英文不要翻译的那种。</strong>本文也是基于Express最新的官方文档来对Express进行一个比较细致的学习。</p>
+<h2 id="Node-js的HTTP模块"><a href="#Node-js的HTTP模块" class="headerlink" title="Node.js的HTTP模块"></a>Node.js的HTTP模块</h2><p>Node.js最开始推出来的时候，作者对它的定义就是一个高性能的非阻塞I/O的web服务器，所以很明显原生的Node.js就提供了很完善的http相关的接口来帮助你快速的搭建你自己的一个web服务，所以说Node.js本身是有http模块能够便捷的提供web服务；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span>;</div><div class="line"><span class="keyword">const</span> port = <span class="number">3000</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</div><div class="line">  res.statusCode = <span class="number">200</span>;</div><div class="line">  res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</div><div class="line">  res.end(<span class="string">'Hello World\n'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">server.listen(port, hostname, () =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at 		http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>但是当我们需要一个路由，需要根据不同的http method来进行不同的response，这个时候http 模块的短板显露无疑，这个时候Express应运而生。</p>
+<h2 id="基于Express搭建一个Web服务"><a href="#基于Express搭建一个Web服务" class="headerlink" title="基于Express搭建一个Web服务"></a>基于Express搭建一个Web服务</h2><p>简单来说Express就是在Node.js的基础上进行了一层封装帮助开发者更加简单的搭建Web服务；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">app.listen = <span class="function"><span class="keyword">function</span> <span class="title">listen</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> server = http.createServer(<span class="keyword">this</span>);</div><div class="line">  <span class="keyword">return</span> server.listen.apply(server, <span class="built_in">arguments</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>以上就是Express源码中/lib/application.js中对node.js的http模块的createServer方法的封装。</p>
 <p>那么利用Express能多快就能搭建一个web服务呢？答案是4行代码；</p>
-<pre><code>const express = require(&apos;express&apos;);       // 引入express
-const app = new express();                // 创建Express对象
-app.get(&apos;/&apos;, (req, res, next) =&gt; res.send(&apos;hello world!&apos;)); // 响应请求
-app.listen(8080);                         // 对端口监听
-</code></pre><p>当然一个稳定且安全的web服务一定不是这么简单的就完了，我们需要路由，需要拦截，需要错误处理，需要静态资源的访问，巴拉巴拉各种需要；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);   	<span class="comment">// 引入express</span></div><div class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> express();				<span class="comment">// 创建Express对象</span></div><div class="line">app.get(<span class="string">'/'</span>, (req, res, next) =&gt; res.send(<span class="string">'hello world!'</span>)); <span class="comment">// 响应请求</span></div><div class="line">app.listen(<span class="number">8080</span>); 						<span class="comment">// 对端口监听</span></div></pre></td></tr></table></figure>
+<p>当然一个稳定且安全的web服务一定不是这么简单的就完了，我们需要路由，需要拦截，需要错误处理，需要静态资源的访问，巴拉巴拉各种需要；</p>
 <p>冷静点，Express通过一个巨有效的机制帮你解决以上所有的需求；</p>
 <p>下面较为隆重的介绍Express的middleware机制：</p>
-<p>Middleware</p>
-<p>Express is a routing and middleware web framework that has minimal functionality of its own官网有这么一段原话，说Express是一个自带有十分少功能的路由和中间件的框架；这就意味着如果你要搭建一整套完善的线上能用的web框架的时候，你需要安装一堆的中间件，并且做好路由的转发。</p>
+<h2 id="Middleware"><a href="#Middleware" class="headerlink" title="Middleware"></a>Middleware</h2><p><strong>Express is a routing and middleware web framework that has minimal functionality of its own</strong>官网有这么一段原话，说Express是一个自带有十分少功能的路由和中间件的框架；这就意味着如果你要搭建一整套完善的线上能用的web框架的时候，你需要安装一堆的中间件，并且做好路由的转发。</p>
 <p>事实上，中间件就是一个函数，能够访问到请求中的数据，访问的到返回的数据，并且能够调用栈当中的下一个中间件函数。</p>
 <p>那么中间件是干什么的呢?</p>
 <p>之前说过Express本身是不带任何什么cookie处理呀，日志存储之类的功能的，所有的常用的Web服务所需要的功能都是通过一个个中间件来处理，于是乎一个中间件函数具备以下几点能力：</p>
@@ -232,7 +214,7 @@ app.listen(8080);                         // 对端口监听
 <li>直接结束当前request-response循环</li>
 <li>调用栈当中的下一个中间件函数</li>
 </ul>
-<p>如果当前的中间件函数没有结束当前的请求，response的过程的话，就必须调用下一个中间件函数，不然这个请求就被hanging住了。</p>
+<p><em>如果当前的中间件函数没有结束当前的请求，response的过程的话，就必须调用下一个中间件函数，不然这个请求就被hanging住了。</em></p>
 <p>从框架的层次结构上看一个Express应用包含以下几类中间件：</p>
 <ol>
 <li>应用级别的中间件；</li>
@@ -241,109 +223,34 @@ app.listen(8080);                         // 对端口监听
 <li>内建中间件；</li>
 <li>第三方中间件；</li>
 </ol>
-<p>应用级别的中间件</p>
-<p>通过app.use和app.METHOD对web应用对象添加中间件。这里METHOD对应的就是HTTP当中的请求的方法比如get/put/post之类的；</p>
-<pre><code>var app = express()
-
-app.use((req, res, next) =&gt; {
-  console.log(&apos;Time:&apos;, Date.now())
-  next()
-})；
-
-app.get(&apos;/user/:id&apos;, (req, res, next) =&gt; {
-   res.send(&apos;USER&apos;); 
-});
-</code></pre><p>可以看到通过调用use方法挂载了一个匿名函数，这个匿名函数就是一个中间件，里面打印了调用这个中间件的时间，然后调用下一个中间件函数；第二个挂载的中间件第一个参数是一个RESTful的路径，当请求匹配到这个路径的时候，将调用这个中间件函数，可以看到这个中间件函数当中执行了一个res.send(‘USER’)返回一个200的response并且其body里面为一个字符串USER;</p>
-<p>这里就会有一个疑问了，这些中间件在栈中的顺序是怎么样的？</p>
+<h3 id="应用级别的中间件"><a href="#应用级别的中间件" class="headerlink" title="应用级别的中间件"></a>应用级别的中间件</h3><p>通过<code>app.use</code>和<code>app.METHOD</code>对web应用对象添加中间件。这里METHOD对应的就是HTTP当中的请求的方法比如get/put/post之类的；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = express()</div><div class="line"></div><div class="line">app.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Time:'</span>, <span class="built_in">Date</span>.now())</div><div class="line">  next()</div><div class="line">&#125;)；</div><div class="line"></div><div class="line">app.get(<span class="string">'/user/:id'</span>, (req, res, next) =&gt; &#123;</div><div class="line">   res.send(<span class="string">'USER'</span>); </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>可以看到通过调用use方法挂载了一个匿名函数，这个匿名函数就是一个中间件，里面打印了调用这个中间件的时间，然后调用下一个中间件函数；第二个挂载的中间件第一个参数是一个RESTful的路径，当请求匹配到这个路径的时候，将调用这个中间件函数，可以看到这个中间件函数当中执行了一个<code>res.send(&#39;USER&#39;)</code>返回一个200的response并且其body里面为一个字符串USER;</p>
+<p><strong>这里就会有一个疑问了，这些中间件在栈中的顺序是怎么样的？</strong></p>
 <p>带着同样的疑问我写了一个简单的例子：</p>
-<pre><code>// 1
-app.use((req, res, next) =&gt; {
-    console.log(`first no path`);
-    next();
-});
-
-// 2
-app.use(&apos;/&apos;, (req, res, next) =&gt; {
-    console.log(&apos;first / path&apos;);
-    next();
-});
-
-// 3
-app.use(&apos;/&apos;, (req, res, next) =&gt; {
-    console.log(&apos;second / path&apos;);
-    next();
-});
-
-// 4
-app.use(&apos;/a&apos;, (req, res, next) =&gt; {
-    console.log(&apos;/a path&apos;);
-    next();
-});
-
-
-// 5
-app.use(&apos;/:id&apos;, (req, res , next) =&gt; {
-    console.log(&apos;/ path with param&apos;);
-    next();
-});
-
-// 6
-app.use((req, res, next) =&gt; {
-    console.log(&apos;no path!&apos;);
-    res.send(&apos;hello middleware!&apos;);
-});
-
-// 7
-app.use((req, res, next) =&gt; {
-      console.log(&apos;last no path&apos;) ;
-    res.send(&apos;Last middleware&apos;);
-});
-</code></pre><p>然后curl <a href="http://localhost:8080/1" target="_blank" rel="external">http://localhost:8080/1</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1</span></div><div class="line">app.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`first no path`</span>);</div><div class="line">    next();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 2</span></div><div class="line">app.use(<span class="string">'/'</span>, (req, res, next) =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'first / path'</span>);</div><div class="line">    next();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 3</span></div><div class="line">app.use(<span class="string">'/'</span>, (req, res, next) =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'second / path'</span>);</div><div class="line">    next();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 4</span></div><div class="line">app.use(<span class="string">'/a'</span>, (req, res, next) =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'/a path'</span>);</div><div class="line">    next();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 5</span></div><div class="line">app.use(<span class="string">'/:id'</span>, (req, res , next) =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'/ path with param'</span>);</div><div class="line">    next();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 6</span></div><div class="line">app.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'no path!'</span>);</div><div class="line">    res.send(<span class="string">'hello middleware!'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 7</span></div><div class="line">app.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</div><div class="line">  	<span class="built_in">console</span>.log(<span class="string">'last no path'</span>) ;</div><div class="line">	res.send(<span class="string">'Last middleware'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>然后<code>curl http://localhost:8080/1</code></p>
 <p>最后请求的结果：</p>
-<pre><code>first no path
-first / path
-second / path
-/ path with param
-no path!
-</code></pre><p>可以发现express是基于挂载的顺序入栈， 这也意味着express对所有的中间件函数都是一视同仁，但是当路径没有匹配的时候，则跳过该函数。并且可以注意到当调用到第6个函数的时候，直接跳出了当前的中间件栈，向页面返回了一段hello middleware!，这也是middleware具有的一个很重要的退出request-response cycle的功能；</p>
-<p>在v4.11.0之后被废弃了的app.param()方法会打破按顺序加载中间件的规则，app.param当中声明一个数组，当中存放了一些参数关键字，当参数字段命中了的时候会在该路径的回调执行之前执行app.param当中声明的回调函数。In What Order Does My Express.js Middleware Execute?</p>
-<p>路由级别中间件</p>
-<p>可以理解路由级别跟应用级别的中间件行为是一致的，除了它是被绑定到express.Router()对象上的；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">first no path</div><div class="line">first / path</div><div class="line">second / path</div><div class="line">/ path with param</div><div class="line">no path!</div></pre></td></tr></table></figure>
+<p>可以发现express是基于挂载的顺序入栈， 这也意味着express对所有的中间件函数都是一视同仁，但是当路径没有匹配的时候，则跳过该函数。并且可以注意到当调用到第6个函数的时候，直接跳出了当前的中间件栈，向页面返回了一段<code>hello middleware!</code>，这也是middleware具有的一个很重要的退出request-response cycle的功能；</p>
+<p><em>在v4.11.0之后被废弃了的app.param()方法会打破按顺序加载中间件的规则，app.param当中声明一个数组，当中存放了一些参数关键字，当参数字段命中了的时候会在该路径的回调执行之前执行app.param当中声明的回调函数。<a href="https://derickbailey.com/2016/05/09/in-what-order-does-my-express-js-middleware-execute/" target="_blank" rel="external">In What Order Does My Express.js Middleware Execute?</a></em></p>
+<h3 id="路由级别中间件"><a href="#路由级别中间件" class="headerlink" title="路由级别中间件"></a>路由级别中间件</h3><p>可以理解路由级别跟应用级别的中间件行为是一致的，除了它是被绑定到express.Router()对象上的；</p>
 <p>路由级别的中间件其实就是在应用级别的中间件下的分支，举个栗子：</p>
-<pre><code>const app = express();
-const router = express.Router();
-
-router.use((req, res, next) =&gt; {
-    console.log(`Time: ${Data.now()}`);
-      next();
-});
-
-router.use(&apos;/b&apos;, (req, res, next) =&gt; {
-       res.send(&apos;hello router&apos;); 
-});
-
-app.use(&apos;/a&apos;, router);
-
-app.listen(8080);
-</code></pre><p>可以看出当命中了/a/b的时候，应用级路由会调用router级别的中间件，在router级别中间件当中会先打印一下当前的时间，再在命中了/a/b路径之后，向网页发送个hello router；</p>
-<p>错误处理中间件、内建中间件</p>
-<p>错误处理中间件类似于应用的不带路径的中间件函数，就是参数的数量是4个，第一个用于接受错误对象</p>
-<pre><code>app.use((err, req, res, next) =&gt; {
-      console.error(err.stack);
-      res.status(500).send(&apos;Someting Broke&apos;);
-});        
-</code></pre><p>Express内建的中间件就一个express.static(root, [options])方法，用于提供静态资源的访问服务。</p>
-<p>第三方中间件</p>
-<p>这个就庞大了。丢出一个地址可以细细品味；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> app = express();</div><div class="line"><span class="keyword">const</span> router = express.Router();</div><div class="line"></div><div class="line">router.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">`Time: <span class="subst">$&#123;Data.now()&#125;</span>`</span>);</div><div class="line">  	next();</div><div class="line">&#125;);</div><div class="line"></div><div class="line">router.use(<span class="string">'/b'</span>, (req, res, next) =&gt; &#123;</div><div class="line">   	res.send(<span class="string">'hello router'</span>); </div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.use(<span class="string">'/a'</span>, router);</div><div class="line"></div><div class="line">app.listen(<span class="number">8080</span>);</div></pre></td></tr></table></figure>
+<p>可以看出当命中了<code>/a/b</code>的时候，应用级路由会调用router级别的中间件，在router级别中间件当中会先打印一下当前的时间，再在命中了<code>/a/b</code>路径之后，向网页发送个hello router；</p>
+<h3 id="错误处理中间件、内建中间件"><a href="#错误处理中间件、内建中间件" class="headerlink" title="错误处理中间件、内建中间件"></a>错误处理中间件、内建中间件</h3><p>错误处理中间件类似于应用的不带路径的中间件函数，就是参数的数量是4个，第一个用于接受错误对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function">(<span class="params">err, req, res, next</span>) =&gt;</span> &#123;</div><div class="line">  	<span class="built_in">console</span>.error(err.stack);</div><div class="line">  	res.status(<span class="number">500</span>).send(<span class="string">'Someting Broke'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Express内建的中间件就一个<code>express.static(root, [options])</code>方法，用于提供静态资源的访问服务。</p>
+<h3 id="第三方中间件"><a href="#第三方中间件" class="headerlink" title="第三方中间件"></a>第三方中间件</h3><p>这个就庞大了。丢出一个<a href="https://expressjs.com/en/resources/middleware.html" target="_blank" rel="external">地址</a>可以细细品味；</p>
+<blockquote>
 <p>大致了解了Express最核心的中间件，对于Express的开发和设计模式也算有了一个比较好的了解；</p>
-<p>Debug</p>
-<p>Expres基于debug模块来提供debug功能。</p>
-<p>这里的Debug功能很类似于写js中用到最多的console.log方法，但是不同于console.log你不需要在生产环境下去全局搜索，然后再注释掉这些console.log，你只需要在开发的时候打开debug功能，在上线的时候不打开就行了。</p>
+</blockquote>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p>Expres基于<a href="https://www.npmjs.com/package/debug" target="_blank" rel="external">debug</a>模块来提供debug功能。</p>
+<p>这里的Debug功能很类似于写js中用到最多的<code>console.log</code>方法，但是不同于<code>console.log</code>你不需要在生产环境下去全局搜索，然后再注释掉这些<code>console.log</code>，你只需要在开发的时候打开debug功能，在上线的时候不打开就行了。</p>
 <p>在Express开发中，如果你需要看到所有的内部的log信息，只需要一行</p>
-<p>DEBUG=express:* node index.js</p>
-<p>通过设置DEBUG环境变量为express:*就行了；</p>
-<p>Express进程管理</p>
-<p>当在生产环境使用Express的时候，使用一个进程管理来监听Express的进程是非常有必要的。简单的带来以下好处：</p>
+<p><code>DEBUG=express:* node index.js</code></p>
+<p>通过设置<code>DEBUG</code>环境变量为<code>express:*</code>就行了；</p>
+<h2 id="Express进程管理"><a href="#Express进程管理" class="headerlink" title="Express进程管理"></a>Express进程管理</h2><p>当在生产环境使用Express的时候，使用一个进程管理来监听Express的进程是非常有必要的。简单的带来以下好处：</p>
 <ul>
 <li>自动重启崩溃的Express进程；</li>
 <li>能够监听运行时Express进程的性能和资源消耗状况</li>
@@ -352,11 +259,10 @@ app.listen(8080);
 </ul>
 <p>一个进程管理类似于一个应用Server能够作为一个应用的容器用来快速部署，提供高可用，并且让你能够在应用运行时管理应用；</p>
 <p>常用的一些进程管理工具：PM2，forever；</p>
-<p>PM2</p>
-<p>自带负载均衡，这个有点厉害；</p>
-<p>能够快速的帮你通过cluster的模式启动四个进程。还能通过pm2 scale [app-name] 10的方式快速扩展你的cluster到10个进程；</p>
-<p>Express最佳实践</p>
-<ol>
+<h3 id="PM2"><a href="#PM2" class="headerlink" title="PM2"></a>PM2</h3><p>自带负载均衡，这个有点厉害；</p>
+<p><img src="http://o8sxkcont.bkt.clouddn.com/4f17c357aa2d5bb871a0fdc1e382a74d.png" alt="4f17c357aa2d5bb871a0fdc1e382a74d"></p>
+<p>能够快速的帮你通过cluster的模式启动四个进程。还能通过<code>pm2 scale [app-name] 10</code>的方式快速扩展你的cluster到10个进程；</p>
+<h2 id="Express最佳实践"><a href="#Express最佳实践" class="headerlink" title="Express最佳实践"></a>Express最佳实践</h2><ol>
 <li>development:<ul>
 <li>采用gzip压缩</li>
 <li>避免同步代码</li>
@@ -416,7 +322,7 @@ app.listen(8080);
   
   
     <a href="/2017/09/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">nginx浅析</div>
     </a>
   
@@ -429,9 +335,9 @@ app.listen(8080);
 
   <aside id="toc-sidebar">
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">Inhalt</strong>
     
-        <ol class="nav">None</ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js的HTTP模块"><span class="nav-number">1.</span> <span class="nav-text">Node.js的HTTP模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于Express搭建一个Web服务"><span class="nav-number">2.</span> <span class="nav-text">基于Express搭建一个Web服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Middleware"><span class="nav-number">3.</span> <span class="nav-text">Middleware</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用级别的中间件"><span class="nav-number">3.1.</span> <span class="nav-text">应用级别的中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由级别中间件"><span class="nav-number">3.2.</span> <span class="nav-text">路由级别中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误处理中间件、内建中间件"><span class="nav-number">3.3.</span> <span class="nav-text">错误处理中间件、内建中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方中间件"><span class="nav-number">3.4.</span> <span class="nav-text">第三方中间件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debug"><span class="nav-number">4.</span> <span class="nav-text">Debug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Express进程管理"><span class="nav-number">5.</span> <span class="nav-text">Express进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PM2"><span class="nav-number">5.1.</span> <span class="nav-text">PM2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Express最佳实践"><span class="nav-number">6.</span> <span class="nav-text">Express最佳实践</span></a></li></ol>
     
     </div>
   </aside>
